@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <Implementation-Version>1.0.0</Implementation-Version>
+        <spring.version>2.5.6</spring.version>
+        <spring.security.version>2.0.4</spring.security.version>
+        <spring.integrations.version>1.0.4.RELEASE</spring.integrations.version>
+        <gx.version>1.2.6</gx.version>
+        <xmlbeans-em.version>1.1.4</xmlbeans-em.version>
+        <xmlbeans-have.version>1.1.2</xmlbeans-have.version>
+        <xmlbeans-infrastructure.version>1.2.1</xmlbeans-infrastructure.version>
+        <xmlbeans-edxl_rm.version>1.0.0</xmlbeans-edxl_rm.version>
+        <infrastructure.version>1.2.0</infrastructure.version>
+        <infrastructure.xmpp.version>1.2.0</infrastructure.xmpp.version>
+        <em.version>1.2.0</em.version>
+        <em-war.version>1.1.1</em-war.version>
+        <github.global.server>github</github.global.server>
+        <!--
+            <my.hibernate.hbm2ddl.auto>update</my.hibernate.hbm2ddl.auto>
+            <my.hibernate.search.default.indexBase>target</my.hibernate.search.default.indexBase>
+            <my.annotation.driven></my.annotation.driven>
+        -->
+    </properties>
+
+    <groupId>com.leidos.xchangecore.core.em</groupId>
+    <packaging>war</packaging>
+    <artifactId>xchangecore</artifactId>
+    <name>xChangeCore's war</name>
+    <version>${em-war.version}</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.leidos.xchangecore.core.infrastructure</groupId>
+            <artifactId>messages</artifactId>
+            <version>${infrastructure.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.leidos.xchangecore.core.infrastructure</groupId>
+            <artifactId>services</artifactId>
+            <version>${infrastructure.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.leidos.xchangecore.core.infrastructure.xmpp</groupId>
+            <artifactId>communications</artifactId>
+            <version>${infrastructure.xmpp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.leidos.xchangecore.core.infrastructure.xmpp</groupId>
+            <artifactId>extensions</artifactId>
+            <version>${infrastructure.xmpp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.leidos.xchangecore.core.em</groupId>
+            <artifactId>services</artifactId>
+            <version>${em.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.leidos.xchangecore.core.em.processes</groupId>
+            <artifactId>agreements</artifactId>
+            <version>${em.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.leidos.xchangecore.core.em.processes</groupId>
+            <artifactId>icsgen</artifactId>
+            <version>${em.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.leidos.xchangecore.core.em.processes</groupId>
+            <artifactId>ipaws</artifactId>
+            <version>${em.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.leidos.xchangecore.core.em.processes</groupId>
+            <artifactId>servlets</artifactId>
+            <version>${em.version}</version>
+        </dependency>
+        <!-- 
+        <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+            <version>2.8.1</version>
+        </dependency>
+        <dependency>
+            <groupId>xalan</groupId>
+            <artifactId>xalan</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.usersmarts.cx</groupId>
+            <artifactId>com.usersmarts.cx.hbm</artifactId>
+            <version>${gx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.igniterealtime.smack</groupId>
+            <artifactId>smack</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.igniterealtime.smack</groupId>
+            <artifactId>smackx</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.google-collections</groupId>
+            <artifactId>google-collect</artifactId>
+            <version>snapshot-20080530</version>
+        </dependency>
+         -->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <Implementation-Version>${Implementation-Version}</Implementation-Version>
+                            <EM-Domain-Version>${em.version}</EM-Domain-Version>
+                            <Infrastructure-Version>${infrastructure.version}</Infrastructure-Version>
+                            <Infrastructure-XMPP-Version>${infrastructure.xmpp.version}</Infrastructure-XMPP-Version>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <!-- attach the copy-resources goal to the deploy phase -->
+            <!-- copy the deploy time configuration file to the target -->
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <!-- there has got to be a better way to get class files, rather than jar files,
+                        into the war -->
+                    <execution>
+                        <id>copy-bin-resources</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/src/main/webapp/WEB-INF/classes</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/../processes/servlets/target/classes</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

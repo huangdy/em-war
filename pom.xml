@@ -10,7 +10,7 @@
     </parent>
 
     <packaging>war</packaging>
-    <artifactId>em-war</artifactId>
+    <artifactId>xchangecore</artifactId>
     <name>xChangeCore's war</name>
     <version>${em-war.version}</version>
 
@@ -23,11 +23,9 @@
                     <archive>
                         <manifestEntries>
                             <Implementation-Version>${Implementation-Version}</Implementation-Version>
-                            <EM-Domain-Version>${em-war.version}</EM-Domain-Version>
-                            <!--
-                                <Infrastructure-Version>${infrastructure.version}</Infrastructure-Version>
-                                <Infrastructure-XMPP-Version>${infrastructure.xmpp.version}</Infrastructure-XMPP-Version>
-                            -->
+                            <em-war.version>${em-war.version}</em-war.version>
+                            <infra-messages.version>${infra-messages.version}</infra-messages.version>
+                            <infrastructure.xmpp.version>${infrastructure.xmpp.version}</infrastructure.xmpp.version>
                         </manifestEntries>
                     </archive>
                 </configuration>

@@ -1,7 +1,7 @@
 <web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
     version="2.4">
-    <display-name>UICDS Web Service Application</display-name>
+    <display-name>xChangeCore Web Service Application</display-name>
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
@@ -18,7 +18,7 @@
     <!-- Define a Security Constraint on this Application -->
     <security-constraint>
         <web-resource-collection>
-            <web-resource-name>UICDS Web Services</web-resource-name>
+            <web-resource-name>xChangeCore Web Services</web-resource-name>
             <url-pattern>/core/ws/services/*</url-pattern>
             <url-pattern>/pub/*</url-pattern>
             <url-pattern>/query/*</url-pattern>
@@ -31,7 +31,7 @@
     <!-- manaegment console access -->
     <security-constraint>
         <web-resource-collection>
-            <web-resource-name>UICDS Admin Services</web-resource-name>
+            <web-resource-name>xChangeCore Admin Services</web-resource-name>
             <!-- updated management console -->
             <url-pattern>/manage/*</url-pattern>
             <url-pattern>/managementconsole/*</url-pattern>
@@ -52,12 +52,12 @@
     <!-- Define the Login Configuration for this Application -->
     <login-config>
         <auth-method>BASIC</auth-method>
-        <realm-name>UICDS Services</realm-name>
+        <realm-name>xChangeCore Services</realm-name>
     </login-config>
 
     <!-- Security roles referenced by this web application -->
     <security-role>
-        <description> The role that is required to log in to UICDS </description>
+        <description> The role that is required to log in to xChangeCore </description>
         <role-name>uicds-users</role-name>
     </security-role>
     <security-role>
@@ -118,7 +118,7 @@
 
     <servlet>
         <servlet-name>directoryServiceProxy</servlet-name>
-        <servlet-class>com.saic.uicds.core.em.adminconsole.server.impl.DirectoryServiceProxyImpl</servlet-class>
+        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.DirectoryServiceProxyImpl</servlet-class>
         <init-param>
             <param-name>consoleResource</param-name>
             <param-value>ConsoleConnection</param-value>
@@ -140,31 +140,31 @@
 
     <servlet>
         <servlet-name>agreementServiceProxy</servlet-name>
-        <servlet-class>com.saic.uicds.core.em.adminconsole.server.impl.AgreementServiceProxyImpl</servlet-class>
+        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.AgreementServiceProxyImpl</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet>
         <servlet-name>interestGroupManagementServiceProxy</servlet-name>
-        <servlet-class>com.saic.uicds.core.em.adminconsole.server.impl.InterestGroupManagementServiceProxyImpl</servlet-class>
+        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.InterestGroupManagementServiceProxyImpl</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet>
         <servlet-name>incidentManagementServiceProxy</servlet-name>
-        <servlet-class>com.saic.uicds.core.em.adminconsole.server.impl.IncidentManagementServiceProxyImpl</servlet-class>
+        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.IncidentManagementServiceProxyImpl</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet>
         <servlet-name>profileServiceProxy</servlet-name>
-        <servlet-class>com.saic.uicds.core.em.adminconsole.server.impl.ProfileServiceProxyImpl</servlet-class>
+        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.ProfileServiceProxyImpl</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet>
         <servlet-name>workProductServiceProxy</servlet-name>
-        <servlet-class>com.saic.uicds.core.em.adminconsole.server.impl.WorkProductServiceProxyImpl</servlet-class>
+        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.WorkProductServiceProxyImpl</servlet-class>
         <init-param>
             <param-name>XSLT_DIR</param-name>
             <param-value>/config/xslt</param-value>
@@ -174,13 +174,13 @@
 
     <servlet>
         <servlet-name>resourceInstanceServiceProxy</servlet-name>
-        <servlet-class>com.saic.uicds.core.em.adminconsole.server.impl.ResourceInstanceServiceProxyImpl</servlet-class>
+        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.ResourceInstanceServiceProxyImpl</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet>
         <servlet-name>loggingServiceProxy</servlet-name>
-        <servlet-class>com.saic.uicds.core.em.adminconsole.server.impl.LoggingServiceProxyImpl</servlet-class>
+        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.LoggingServiceProxyImpl</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 

@@ -24,7 +24,7 @@
                         <manifestEntries>
                             <Implementation-Version>${Implementation-Version}</Implementation-Version>
                             <em-war.version>${em-war.version}</em-war.version>
-                            <infra-messages.version>${infra-messages.version}</infra-messages.version>
+                            <infra-services.version>${infra-services.version}</infra-services.version>
                             <infrastructure.xmpp.version>${infrastructure.xmpp.version}</infrastructure.xmpp.version>
                         </manifestEntries>
                     </archive>

@@ -22,17 +22,17 @@
 
 	<!-- Loggers to filter out various class paths -->
 
-	<logger name="com.saic.uicds.core.infrastructure.log.LogFileMonitor">
+	<logger name="com.leidos.xchangecore.core.infrastructure.log.LogFileMonitor">
 		<level value="error"/>
 		<appender-ref ref="UICDSLogger" />
     </logger>
 
-	<logger name="com.saic">
+	<logger name="com.leidos">
 		<level value="info"/>
 		<appender-ref ref="UICDSLogger" />
     </logger>
 	
-	<logger name="com.saic">
+	<logger name="com.leidos">
 		<level value="debug"/>
 		<appender-ref ref="UICDSLogger" />
     </logger>

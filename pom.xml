@@ -57,4 +57,30 @@
             </plugin>
         </plugins>
     </build>
+    <dependencies>
+        <dependency>
+            <groupId>com.leidos.xchangecore.core</groupId>
+            <artifactId>em-agreements</artifactId>
+            <version>${em-processes.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.leidos.xchangecore.core</groupId>
+            <artifactId>infra-services</artifactId>
+            <version>${infra-services.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.leidos.xchangecore.core</groupId>
+            <artifactId>infra-xmpp</artifactId>
+            <version>${infra-xmpp.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.leidos.xchangecore.core</groupId>
+            <artifactId>em-services</artifactId>
+            <version>${em-services.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
 </project>

@@ -27,11 +27,6 @@
     </logger>
 
     <logger name="com.leidos.xchangecore.core">
-        <level value="info" />
-        <appender-ref ref="xChangeCoreLogger" />
-    </logger>
-
-    <logger name="com.leidos.xchangecore.core">
         <level value="debug" />
         <appender-ref ref="xChangeCoreLogger" />
     </logger>

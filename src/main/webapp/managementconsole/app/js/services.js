@@ -29,7 +29,7 @@ value('version', '0.5')
     var rosterAPI = {};
 
     rosterAPI.getRosterStatus = function () {
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         var xmlRequest = ['<?xml version="1.0" encoding="UTF-8"?>',
                 '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">',
@@ -62,7 +62,7 @@ value('version', '0.5')
 
     instancesAPI.getProfileList = function () {
 
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         var xmlRequest = ['<?xml version="1.0" encoding="UTF-8"?>',
                 '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">',
@@ -88,7 +88,7 @@ value('version', '0.5')
 
     instancesAPI.getProfile = function (profileID) {
 
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         if (profileID) {
             var xmlRequest = ['<?xml version="1.0" encoding="UTF-8"?>',
@@ -117,7 +117,7 @@ value('version', '0.5')
 
     instancesAPI.getInstanceList = function () {
 
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         var xmlRequest = ['<?xml version="1.0" encoding="UTF-8"?>',
                 '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">',
@@ -143,7 +143,7 @@ value('version', '0.5')
 
     instancesAPI.getInstance = function (instanceID) {
 
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         var xmlRequest;
         if (instanceID) {
@@ -173,7 +173,7 @@ value('version', '0.5')
 
     instancesAPI.createProfile = function (profile) {
 
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         var xmlRequest;
         if (profile) {
@@ -207,7 +207,7 @@ value('version', '0.5')
 
     instancesAPI.deleteProfile = function (profileID) {
 
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         var xmlRequest;
         if (profileID) {
@@ -237,7 +237,7 @@ value('version', '0.5')
 
     instancesAPI.deleteInterest = function (profileID, interest) {
 
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         var xmlRequest;
         if (profileID && interest) {
@@ -268,7 +268,7 @@ value('version', '0.5')
 
     instancesAPI.addInterest = function (profileID, interest) {
 
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         var xmlRequest;
         if (profileID && interest) {
@@ -299,7 +299,7 @@ value('version', '0.5')
 
     instancesAPI.createInstance = function (instance) {
 
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         var xmlRequest;
         if (instance) {
@@ -331,7 +331,7 @@ value('version', '0.5')
 
     instancesAPI.deleteInstance = function (instanceID) {
 
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         var xmlRequest;
         if (instanceID) {
@@ -580,7 +580,7 @@ value('version', '0.5')
 
     workProductAPI.closeWorkProduct = function (workproduct) {
 
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         var id = workproduct.PackageMetadata[0].WorkProductIdentification[0].Identifier[0].text;
         var version = workproduct.PackageMetadata[0].WorkProductIdentification[0].Version[0].text;
@@ -620,7 +620,7 @@ value('version', '0.5')
 
     workProductAPI.archiveWorkProduct = function (workproduct) {
 
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         var id = workproduct.PackageMetadata[0].WorkProductIdentification[0].Identifier[0].text;
         var version = workproduct.PackageMetadata[0].WorkProductIdentification[0].Version[0].text;
@@ -676,7 +676,7 @@ value('version', '0.5')
 
     incidentAPI.closeIncident = function (igID) {
 
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         var xmlRequest = ['<?xml version="1.0" encoding="UTF-8"?>',
             '<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">',
@@ -703,7 +703,7 @@ value('version', '0.5')
 
     incidentAPI.archiveIncident = function (igID) {
 
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         var xmlRequest = ['<?xml version="1.0" encoding="UTF-8"?>',
             '<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">',
@@ -735,7 +735,7 @@ value('version', '0.5')
     var agreementsAPI = {};
 
     agreementsAPI.getAgreementsList = function (xmlRequest) {
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         console.log("Fetching agreements ")
 
@@ -750,7 +750,7 @@ value('version', '0.5')
     }
 
     agreementsAPI.rescindAgreement = function (xmlRequest) {
-        var serviceURL = '/uicds/core/ws/services'
+        var serviceURL = '/xchangecore/core/ws/services'
 
         console.log("Rescinding agreement ")
 
@@ -765,7 +765,7 @@ value('version', '0.5')
     }
 
     agreementsAPI.createAgreement = function (xmlRequest) {
-        var serviceURL = '/uicds/core/ws/services'        
+        var serviceURL = '/xchangecore/core/ws/services'        
         
         console.log("Creating new agreement ")
 
@@ -780,7 +780,7 @@ value('version', '0.5')
     }
 
     agreementsAPI.updateAgreement = function (xmlRequest) {
-        var serviceURL = '/uicds/core/ws/services'        
+        var serviceURL = '/xchangecore/core/ws/services'        
         
         console.log("Updating agreement ")
 

@@ -1,5 +1,5 @@
 var currentURL = window.location;   
-var defaultRedirectURL = '/uicds/login.html';
+var defaultRedirectURL = '/xchangecore/login.html';
  
 // logout function
 function logout(redirectURL) {

@@ -12,7 +12,7 @@ value('version', '0.5')
     var corePropertiesAPI = {};
 
     corePropertiesAPI.getProperties = function () {
-        var serviceURL = '/uicds/core.properties'
+        var serviceURL = '/xchangecore/core.properties'
         var value = "UNKNOWN";
         //var expression = /console\.title=/g;
 
@@ -552,7 +552,7 @@ value('version', '0.5')
 
     searchAPI.getWorkProducts = function (params) {
 
-        var serviceURL = '/uicds/pub/search?'
+        var serviceURL = '/xchangecore/pub/search?'
         if (params) {
             for (var i = 0; i < params.length; i++) {
                 for (var key in params[i]) {

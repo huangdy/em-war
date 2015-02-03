@@ -8,7 +8,6 @@
 			classpath:contexts/tx-annotation.xml
             classpath:contexts/applicationContext-em.xml
             classpath:contexts/applicationContext-infra.xml
-			classpath:contexts/mssql-dataSrcContext.xml
             classpath:contexts/applicationContext-processes.xml
             classpath:contexts/xmppContext.xml
             /WEB-INF/applicationContext-security.xml
@@ -35,7 +34,7 @@
             <!-- updated management console -->
             <url-pattern>/manage/*</url-pattern>
             <url-pattern>/managementconsole/*</url-pattern>
-            <url-pattern>/core.properties</url-pattern>  
+            <url-pattern>/core.properties</url-pattern>
 
             <!-- old console, these resources should be removed from the build -->
             <url-pattern>/AdminConsole.html</url-pattern>
@@ -85,7 +84,7 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-    
+
     <!-- ==================================== SPRING WS SERVLET ==================================== -->
     <servlet>
         <servlet-name>uicds-ws</servlet-name>

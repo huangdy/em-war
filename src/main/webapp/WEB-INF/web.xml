@@ -32,7 +32,6 @@
         <web-resource-collection>
             <web-resource-name>xChangeCore Admin Services</web-resource-name>
             <!-- updated management console
-
                 <url-pattern>/manage/*</url-pattern>
             -->
             <url-pattern>/managementconsole/*</url-pattern>
@@ -115,120 +114,12 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
-    <!-- ================================= GWT REMOTE SERVICE PROXIES ================================ -->
-
-    <servlet>
-        <servlet-name>directoryServiceProxy</servlet-name>
-        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.DirectoryServiceProxyImpl</servlet-class>
-        <init-param>
-            <param-name>consoleResource</param-name>
-            <param-value>ConsoleConnection</param-value>
-        </init-param>
-        <init-param>
-            <param-name>corePassword</param-name>
-            <param-value>%COREPASS%</param-value>
-        </init-param>
-        <init-param>
-            <param-name>boshServiceUrl</param-name>
-            <param-value>http://localhost:7070/http-bind/</param-value>
-        </init-param>
-        <init-param>
-            <param-name>connectionTimeOut</param-name>
-            <param-value>60000</param-value>
-        </init-param>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-
-    <servlet>
-        <servlet-name>agreementServiceProxy</servlet-name>
-        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.AgreementServiceProxyImpl</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-
-    <servlet>
-        <servlet-name>interestGroupManagementServiceProxy</servlet-name>
-        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.InterestGroupManagementServiceProxyImpl</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-
-    <servlet>
-        <servlet-name>incidentManagementServiceProxy</servlet-name>
-        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.IncidentManagementServiceProxyImpl</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-
-    <servlet>
-        <servlet-name>profileServiceProxy</servlet-name>
-        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.ProfileServiceProxyImpl</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-
-    <servlet>
-        <servlet-name>workProductServiceProxy</servlet-name>
-        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.WorkProductServiceProxyImpl</servlet-class>
-        <init-param>
-            <param-name>XSLT_DIR</param-name>
-            <param-value>/config/xslt</param-value>
-        </init-param>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-
-    <servlet>
-        <servlet-name>resourceInstanceServiceProxy</servlet-name>
-        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.ResourceInstanceServiceProxyImpl</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-
-    <servlet>
-        <servlet-name>loggingServiceProxy</servlet-name>
-        <servlet-class>com.leidos.xchangecore.core.em.adminconsole.server.impl.LoggingServiceProxyImpl</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>directoryServiceProxy</servlet-name>
-        <url-pattern>/proxy/DirectoryServiceProxy</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>agreementServiceProxy</servlet-name>
-        <url-pattern>/proxy/AgreementServiceProxy</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>interestGroupManagementServiceProxy</servlet-name>
-        <url-pattern>/proxy/InterestGroupManagementServiceProxy</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>incidentManagementServiceProxy</servlet-name>
-        <url-pattern>/proxy/IncidentManagementServiceProxy</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>profileServiceProxy</servlet-name>
-        <url-pattern>/proxy/ProfileServiceProxy</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>workProductServiceProxy</servlet-name>
-        <url-pattern>/proxy/WorkProductServiceProxy</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>resourceInstanceServiceProxy</servlet-name>
-        <url-pattern>/proxy/ResourceInstanceServiceProxy</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>loggingServiceProxy</servlet-name>
-        <url-pattern>/proxy/LoggingServiceProxy</url-pattern>
-    </servlet-mapping>
-
+    <!-- Deprecated - DDH 2/6/2015
     <servlet>
         <servlet-name>InfoServlet</servlet-name>
         <servlet-class>InfoServlet</servlet-class>
     </servlet>
+     -->
 
     <!-- ==================================== SPRING MVC SERVLET MAPPING ==================================== -->
 
@@ -258,10 +149,12 @@
         </filter> <filter-mapping> <filter-name>springSecurityFilterChain</filter-name>
         <url-pattern>/*</url-pattern> </filter-mapping> -->
 
+    <!-- Deprecated - DDH 2/6/2015
     <servlet-mapping>
         <servlet-name>InfoServlet</servlet-name>
         <url-pattern>/info</url-pattern>
     </servlet-mapping>
+     -->
 
     <resource-ref>
         <description>Hibernate data source</description>

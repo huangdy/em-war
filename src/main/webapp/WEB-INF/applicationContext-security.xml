@@ -39,7 +39,7 @@ http://www.springframework.org/schema/security http://www.springframework.org/sc
 
 	<bean:bean id="authenticationEntryPoint"
 		class="org.springframework.security.ui.basicauth.BasicProcessingFilterEntryPoint">
-		<bean:property name="realmName" value="uicds" />
+		<bean:property name="realmName" value="xchangecore" />
 	</bean:bean>
 
 	<bean:bean id="authenticationProcessingFilter"

@@ -23,7 +23,7 @@
             <url-pattern>/query/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-            <role-name>uicds-users</role-name>
+            <role-name>xchangecore-users</role-name>
         </auth-constraint>
     </security-constraint>
 
@@ -31,20 +31,22 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>xChangeCore Admin Services</web-resource-name>
-            <!-- updated management console -->
-            <url-pattern>/manage/*</url-pattern>
+            <!-- updated management console
+
+                <url-pattern>/manage/*</url-pattern>
+            -->
             <url-pattern>/managementconsole/*</url-pattern>
             <url-pattern>/core.properties</url-pattern>
 
-            <!-- old console, these resources should be removed from the build -->
-            <url-pattern>/AdminConsole.html</url-pattern>
-            <url-pattern>/console/*</url-pattern>
-            <url-pattern>/Console.html</url-pattern>
-
+            <!-- old console, these resources should be removed from the build
+                <url-pattern>/AdminConsole.html</url-pattern>
+                <url-pattern>/console/*</url-pattern>
+                <url-pattern>/Console.html</url-pattern>
+            -->
 
         </web-resource-collection>
         <auth-constraint>
-            <role-name>uicds-admins</role-name>
+            <role-name>xchangecore-admins</role-name>
         </auth-constraint>
     </security-constraint>
 
@@ -57,11 +59,11 @@
     <!-- Security roles referenced by this web application -->
     <security-role>
         <description> The role that is required to log in to xChangeCore </description>
-        <role-name>uicds-users</role-name>
+        <role-name>xchangecore-users</role-name>
     </security-role>
     <security-role>
         <description> The role that is required to acces administrative functions </description>
-        <role-name>uicds-admins</role-name>
+        <role-name>xchangecore-admins</role-name>
     </security-role>
 
 
@@ -87,7 +89,7 @@
 
     <!-- ==================================== SPRING WS SERVLET ==================================== -->
     <servlet>
-        <servlet-name>uicds-ws</servlet-name>
+        <servlet-name>xchangecore-ws</servlet-name>
         <servlet-class>org.springframework.ws.transport.http.MessageDispatcherServlet</servlet-class>
         <init-param>
             <param-name>transformWsdlLocations</param-name>
@@ -95,7 +97,7 @@
         </init-param>
     </servlet>
     <servlet-mapping>
-        <servlet-name>uicds-ws</servlet-name>
+        <servlet-name>xchangecore-ws</servlet-name>
         <url-pattern>/core/ws/services/*</url-pattern>
     </servlet-mapping>
 

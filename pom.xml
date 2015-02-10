@@ -15,29 +15,13 @@
     <version>${em-war.version}</version>
 
     <build>
-        <!-- this section filtered the proper core.properties to be used
-            <resources>
-            <resource>
-            <directory>src/main/webapp</directory>
-            </resource>
-            <resource>
-            <filtering>true</filtering>
-            <directory>src/main/resources</directory>
-            </resource>
-            <resource>
-            <directory>${basedir}/../em-processes/servlets/target/classes</directory>
-            <targetPath>./WEB-INF/classes</targetPath>
-            </resource>
-            <resource>
-            <directory>src/main/resources</directory>
-            <targetPath>./WEB-INF/classes</targetPath>
-            </resource>
-            </resources>
 
-            <filters>
-            <filter>${basedir}/../infra-services/src/main/resources/datastore/${data.source}/core.properties</filter>
-            </filters>
-        -->
+        <resources>
+            <resource>
+                <filtering>true</filtering>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
 
         <plugins>
             <plugin>
@@ -60,50 +44,6 @@
                     </archive>
                 </configuration>
             </plugin>
-
-            <plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <executions>
-                    <!-- there has got to be a better way to get class files, rather than jar files into
-                        the war -->
-                    <execution>
-                        <id>copy-bin-resources</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/src/main/webapp/WEB-INF/classes</outputDirectory>
-                            <resources>
-                                <!-- make InfoServlet as part of the war
-                                    <resource>
-                                    <directory>${basedir}/../em-processes/servlets/target/classes</directory>
-                                    </resource>
-                                -->
-                            </resources>
-                        </configuration>
-                    </execution>
-                    <!-- there has got to be a better way to get class files, rather than jar files
-                        into the war -->
-                    <execution>
-                        <id>copy-core_properties</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/src/main/webapp</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>${basedir}/../infra-services/src/main/resources/datastore/${data.source}</directory>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-
-                </executions>
-            </plugin>
-
         </plugins>
     </build>
 

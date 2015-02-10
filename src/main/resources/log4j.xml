@@ -12,7 +12,7 @@
     <appender name="xChangeCoreLogger" class="org.apache.log4j.rolling.RollingFileAppender">
         <param name="encoding" value="UTF-8" />
         <rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
-            <param name="FileNamePattern" value="Logs/xchangecore.log.%d{yyyy-MM-dd}" />
+            <param name="FileNamePattern" value="${log.file.directory}/xchangecore.log.%d{yyyy-MM-dd}" />
         </rollingPolicy>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="[%p %d{HH:mm:ss} %c{1}] %m%n" />

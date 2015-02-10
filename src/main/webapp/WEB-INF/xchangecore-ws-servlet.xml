@@ -66,7 +66,8 @@
             </bean>
         </property>
         <property name="portTypeName" value="DirectoryService" />
-        <property name="locationUri" value="http://localhost:8080/uicds/core/ws/services/DirectoryService" />
+        <property name="locationUri"
+            value="http://localhost:8080/xchangecore/core/ws/services/DirectoryService" />
     </bean>
     <bean id="AgreementService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
@@ -76,7 +77,8 @@
             </bean>
         </property>
         <property name="portTypeName" value="AgreementService" />
-        <property name="locationUri" value="http://localhost:8080/uicds/core/ws/services/AgreementService" />
+        <property name="locationUri"
+            value="http://localhost:8080/xchangecore/core/ws/services/AgreementService" />
     </bean>
     <bean id="AlertService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
@@ -86,7 +88,7 @@
             </bean>
         </property>
         <property name="portTypeName" value="AlertService" />
-        <property name="locationUri" value="http://localhost:8080/uicds/core/ws/services/AlertService" />
+        <property name="locationUri" value="http://localhost:8080/xchangecore/core/ws/services/AlertService" />
     </bean>
     <bean id="IncidentManagementService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
@@ -97,9 +99,9 @@
         </property>
         <property name="portTypeName" value="IncidentManagementService" />
         <property name="locationUri"
-            value="http://localhost:8080/uicds/core/ws/services/IncidentManagementService" />
+            value="http://localhost:8080/xchangecore/core/ws/services/IncidentManagementService" />
     </bean>
-       <bean id="InterestGroupService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
+    <bean id="InterestGroupService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
             <bean class="org.springframework.xml.xsd.SimpleXsdSchema">
                 <property name="xsd"
@@ -108,8 +110,8 @@
         </property>
         <property name="portTypeName" value="InterestGroupService" />
         <property name="locationUri"
-            value="http://localhost:8080/uicds/core/ws/services/InterestGroupService" />
-    </bean> 
+            value="http://localhost:8080/xchangecore/core/ws/services/InterestGroupService" />
+    </bean>
     <bean id="LoggingService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
             <bean class="org.springframework.xml.xsd.SimpleXsdSchema">
@@ -118,7 +120,7 @@
             </bean>
         </property>
         <property name="portTypeName" value="LoggingService" />
-        <property name="locationUri" value="http://localhost:8080/uicds/core/ws/services/LoggingService" />
+        <property name="locationUri" value="http://localhost:8080/xchangecore/core/ws/services/LoggingService" />
     </bean>
     <bean id="WorkProductService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
@@ -136,7 +138,8 @@
             </props>
         </property>
         <property name="portTypeName" value="WorkProductService" />
-        <property name="locationUri" value="http://localhost:8080/uicds/core/ws/services/WorkProductService" />
+        <property name="locationUri"
+            value="http://localhost:8080/xchangecore/core/ws/services/WorkProductService" />
     </bean>
     <bean id="IncidentCommandService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
@@ -147,7 +150,7 @@
         </property>
         <property name="portTypeName" value="IncidentCommandService" />
         <property name="locationUri"
-            value="http://localhost:8080/uicds/core/ws/services/IncidentCommandService" />
+            value="http://localhost:8080/xchangecore/core/ws/services/IncidentCommandService" />
     </bean>
     <bean id="MapService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
@@ -157,7 +160,7 @@
             </bean>
         </property>
         <property name="portTypeName" value="MapService" />
-        <property name="locationUri" value="http://localhost:8080/uicds/core/ws/services/MapService" />
+        <property name="locationUri" value="http://localhost:8080/xchangecore/core/ws/services/MapService" />
     </bean>
     <!--
         <bean id="ProfileService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
@@ -168,7 +171,7 @@
         </bean>
         </property>
         <property name="portTypeName" value="ProfileService" />
-        <property name="locationUri" value="http://localhost:8080/uicds/core/ws/services/ProfileService"
+        <property name="locationUri" value="http://localhost:8080/xchangecore/core/ws/services/ProfileService"
         />
         </bean>
     -->
@@ -180,7 +183,8 @@
             </bean>
         </property>
         <property name="portTypeName" value="BroadcastService" />
-        <property name="locationUri" value="http://localhost:8080/uicds/core/ws/services/BroadcastService" />
+        <property name="locationUri"
+            value="http://localhost:8080/xchangecore/core/ws/services/BroadcastService" />
     </bean>
     <bean id="TaskingService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
@@ -190,7 +194,7 @@
             </bean>
         </property>
         <property name="portTypeName" value="TaskingService" />
-        <property name="locationUri" value="http://localhost:8080/uicds/core/ws/Services/TaskingService" />
+        <property name="locationUri" value="http://localhost:8080/xchangecore/core/ws/Services/TaskingService" />
     </bean>
     <bean id="NotificationService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
@@ -209,7 +213,8 @@
             </props>
         </property>
         <property name="portTypeName" value="NotificationService" />
-        <property name="locationUri" value="http://localhost:8080/uicds/core/ws/services/NotificationService" />
+        <property name="locationUri"
+            value="http://localhost:8080/xchangecore/core/ws/services/NotificationService" />
     </bean>
     <bean id="ResourceManagementService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
@@ -220,7 +225,7 @@
         </property>
         <property name="portTypeName" value="ResourceManagementService" />
         <property name="locationUri"
-            value="http://localhost:8080/uicds/core/ws/services/ResourceManagementService" />
+            value="http://localhost:8080/xchangecore/core/ws/services/ResourceManagementService" />
     </bean>
     <bean id="IAPService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
@@ -230,7 +235,7 @@
             </bean>
         </property>
         <property name="portTypeName" value="IAPService" />
-        <property name="locationUri" value="http://localhost:8080/uicds/core/ws/services/IAPService" />
+        <property name="locationUri" value="http://localhost:8080/xchangecore/core/ws/services/IAPService" />
     </bean>
     <bean id="SensorService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
@@ -240,7 +245,7 @@
             </bean>
         </property>
         <property name="portTypeName" value="SensorService" />
-        <property name="locationUri" value="http://localhost:8080/uicds/core/ws/services/SensorSerivce" />
+        <property name="locationUri" value="http://localhost:8080/xchangecore/core/ws/services/SensorSerivce" />
     </bean>
     <bean id="ResourceInstanceService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
@@ -251,7 +256,7 @@
         </property>
         <property name="portTypeName" value="ResourceInstanceService" />
         <property name="locationUri"
-            value="http://localhost:8080/uicds/core/ws/services/ResourceInstanceService" />
+            value="http://localhost:8080/xchangecore/core/ws/services/ResourceInstanceService" />
     </bean>
     <bean id="ResourceProfileService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
@@ -262,7 +267,7 @@
         </property>
         <property name="portTypeName" value="ResourceProfileService" />
         <property name="locationUri"
-            value="http://localhost:8080/uicds/core/ws/services/ResourceProfileService" />
+            value="http://localhost:8080/xchangecore/core/ws/services/ResourceProfileService" />
     </bean>
     <bean id="LEITSCService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
         <property name="schema">
@@ -272,6 +277,6 @@
             </bean>
         </property>
         <property name="portTypeName" value="LEITSCService" />
-        <property name="locationUri" value="http://localhost:8080/uicds/core/ws/services/LEITSCService" />
+        <property name="locationUri" value="http://localhost:8080/xchangecore/core/ws/services/LEITSCService" />
     </bean>
 </beans>

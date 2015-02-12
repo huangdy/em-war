@@ -34,6 +34,7 @@
                             <directory>src/main/webapp</directory>
                             <includes>
                                 <include>core.properties</include>
+                                <include>WEB-INF/web.xml</include>
                             </includes>
                         </resource>
                     </webResources>

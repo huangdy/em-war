@@ -2,7 +2,6 @@
 
 /* Services */
 
-
 // Demonstrate how to register services
 // In this case it is a simple value service.
 angular.module('consoleApp.services', []).
@@ -369,7 +368,7 @@ value('version', '0.5')
 
     usersAPI.createUser = function (user) {
 
-        var serviceURL = '/manage/users?_action=create&_prettyPrint=true';
+        var serviceURL = '/opendj-connector/users?_action=create&_prettyPrint=true';
 
         if (user) {
             var jsonRequest = {
@@ -402,7 +401,7 @@ value('version', '0.5')
     }
 
     usersAPI.createGroup = function (group) {
-        var serviceURL = '/manage/groups?_action=create&_prettyPrint=true';
+        var serviceURL = '/opendj-connector/groups?_action=create&_prettyPrint=true';
 
         if (group) {
             var jsonRequest = {
@@ -429,7 +428,7 @@ value('version', '0.5')
     }
 
     usersAPI.updateUser = function (user, updates) {
-        var serviceURL = '/manage/users';
+        var serviceURL = '/opendj-connector/users';
 
         if (updates.length > 0) {
             serviceURL = serviceURL + '/' + user.displayName + '?_prettyPrint=true';
@@ -449,7 +448,7 @@ value('version', '0.5')
     }
 
     usersAPI.updateGroup = function (group, updates) {
-        var serviceURL = '/manage/groups';
+        var serviceURL = '/opendj-connector/groups';
 
         if (updates.length > 0) {
             serviceURL = serviceURL + '/' + group.displayName + '?_prettyPrint=true';
@@ -470,7 +469,7 @@ value('version', '0.5')
     }
 
     usersAPI.deleteUser = function (user) {
-        var serviceURL = '/manage/users';
+        var serviceURL = '/opendj-connector/users';
 
         console.log("Deleting user " + user.displayName)
 
@@ -488,7 +487,7 @@ value('version', '0.5')
     }
 
     usersAPI.deleteGroup = function (group) {
-        var serviceURL = '/manage/groups';
+        var serviceURL = '/opendj-connector/groups';
 
         console.log("Deleting group " + group.displayName)
 
@@ -506,7 +505,7 @@ value('version', '0.5')
 
     usersAPI.getUsers = function (userid) {
 
-        var serviceURL = '/manage/users';
+        var serviceURL = '/opendj-connector/users';
 
         if (userid) {
             serviceURL = serviceURL + '/' + userid + '?_prettyPrint=true';
@@ -525,7 +524,7 @@ value('version', '0.5')
 
     usersAPI.getGroups = function (group) {
 
-        var serviceURL = '/manage/groups';
+        var serviceURL = '/opendj-connector/groups';
 
         if (group) {
             serviceURL = serviceURL + '/' + group + '?_prettyPrint=true';
@@ -796,5 +795,3 @@ value('version', '0.5')
 
     return agreementsAPI;
 })
-
-;

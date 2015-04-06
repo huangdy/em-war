@@ -291,7 +291,7 @@ angular.module('consoleApp.controllers', [])
             "latitude": "",
             "displayName": "",
             "groups": [{
-                "displayName": "uicds-users"
+                "displayName": "xchangecore-users"
             }]
         };
 
@@ -1055,7 +1055,7 @@ angular.module('consoleApp.controllers', [])
 
             // enrich object selected agreement object
             agreement.agreementNS = $scope.agreementNS;
-            agreement.localCore = 'uicds@' + $scope.fqdn;
+            agreement.localCore = 'xchangecore@' + $scope.fqdn;
             
             agreement.guid = function () {
                 return guid()

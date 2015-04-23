@@ -19,7 +19,7 @@
 				    	<li ng-if="viewType=='byInterestGroup'" ng-click="closeAndArchiveSelectedIncidents();"><a>Close and Archive Selected Incidents</a></li>
 				    	<li ng-if="viewType=='byInterestGroup'" class="divider"></li>
 				    	<li ng-click="viewJSON();"><a>View as JSON</a></li>
-				 		<li><a target="_blank" href="/uicds/pub/search?format=xml&productID={{workproducts[selectedID].PackageMetadata[0].WorkProductIdentification[0].Identifier[0].text}}&full=true">View as XML</a></li>
+				 		<li><a target="_blank" href="/xchangecore/pub/search?format=xml&productID={{workproducts[selectedID].PackageMetadata[0].WorkProductIdentification[0].Identifier[0].text}}&full=true">View as XML</a></li>
 				 		<li class="divider"></li>
 						<li ng-click="refresh(viewType)"><a>Refresh</a></li>
 				    </ul>

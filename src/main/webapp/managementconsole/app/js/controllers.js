@@ -1102,7 +1102,8 @@ angular.module('consoleApp.controllers', [])
                      $scope.refresh();
                     agreement.action = '';
                 }).error(function (response) {
-                    alert("Failed to create agreement with " + agreement.Principals[0].RemoteCore[0].text);
+                    alert("Failed to create agreement with " + agreement.Principals[0].RemoteCore[0].text + "\r\n\r\n" +
+                    		getSOAPFaultReason(response));
                 });     
             } else {
                 xml = Mustache.render(xmlUpdateAgreementTmpl, agreement, partials);
@@ -1111,7 +1112,8 @@ angular.module('consoleApp.controllers', [])
                      $scope.refresh();
                      agreement.action = '';
                 }).error(function (response) {
-                    alert("Failed to update agreement with " + agreement.Principals[0].RemoteCore[0].text);
+                    alert("Failed to update agreement with " + agreement.Principals[0].RemoteCore[0].text+ "\r\n\r\n" +
+                    		getSOAPFaultReason(response));
                 });                 
             }
         }

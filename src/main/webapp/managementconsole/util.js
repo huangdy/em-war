@@ -40,6 +40,12 @@ function showAlert(title, msg) {
 	$("#alert-panel").append('<div class="alert" style="color: #990000;"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>' + title + '</strong>&nbsp;&nbsp;' + msg + '</div>');
 }
 
+// figure out the SOAP Fault Reason
+function getSOAPFaultReason(xml) {
+	var reason = "No Can Find";
+	reason = $(xml).find('faultstring').text();
+	return "Reason: " + reason;
+}
 
 // fix indents for xml views (takes xml string, not object)
 function formatXml(xml) {

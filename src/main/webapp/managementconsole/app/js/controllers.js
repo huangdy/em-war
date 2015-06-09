@@ -1102,17 +1102,18 @@ angular.module('consoleApp.controllers', [])
                      $scope.refresh();
                     agreement.action = '';
                 }).error(function (response) {
-                    alert("Failed to create agreement with " + agreement.Principals[0].RemoteCore[0].text + "\r\n\r\n" +
+                    alert("Failed to create agreement with " + agreement.Principals[0].RemoteCore[0].text + "\n\n" +
                     		getSOAPFaultReason(response));
                 });     
             } else {
                 xml = Mustache.render(xmlUpdateAgreementTmpl, agreement, partials);
+                alert("Update Agreement: " + xml);
                 agreementsAPIService.updateAgreement(xml).success(function (response) {
                     alert("Successfully updated agreement with " + agreement.Principals[0].RemoteCore[0].text);
                      $scope.refresh();
                      agreement.action = '';
                 }).error(function (response) {
-                    alert("Failed to update agreement with " + agreement.Principals[0].RemoteCore[0].text+ "\r\n\r\n" +
+                    alert("Failed to update agreement with " + agreement.Principals[0].RemoteCore[0].text+ "\n\n" +
                     		getSOAPFaultReason(response));
                 });                 
             }

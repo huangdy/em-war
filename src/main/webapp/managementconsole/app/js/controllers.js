@@ -1107,7 +1107,7 @@ angular.module('consoleApp.controllers', [])
                 });     
             } else {
                 xml = Mustache.render(xmlUpdateAgreementTmpl, agreement, partials);
-                alert("Update Agreement: " + xml);
+                // debug alert("Update Agreement: " + xml);
                 agreementsAPIService.updateAgreement(xml).success(function (response) {
                     alert("Successfully updated agreement with " + agreement.Principals[0].RemoteCore[0].text);
                      $scope.refresh();

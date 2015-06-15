@@ -122,7 +122,8 @@ angular.module('consoleApp.controllers', [])
                 alert("Successfully created profile " + profile.ID[0].text)
             })
             .error(function (response) {
-                alert("Failed to create profile " + profile.ID[0].text + ".\n\n" + "Does this entry already exist?  Check the core logs.")
+                alert("Failed to create profile " + profile.ID[0].text + ".\n\n" + 
+                    getSOAPFaultReason(response));
             });
         }
     }
@@ -134,7 +135,8 @@ angular.module('consoleApp.controllers', [])
                 alert("Successfully deleted profile " + profileID)
             })
             .error(function (response) {
-                alert("Failed to delete profile " + profileID + ".\n\n" + "Check the core logs.")
+                alert("Failed to delete profile " + profileID + 
+                    getSOAPFaultReason(response));
             });
     }
 
@@ -159,7 +161,8 @@ angular.module('consoleApp.controllers', [])
                 alert("Successfully created instance " + instance.ID[0].text)
             })
             .error(function (response) {
-                alert("Failed to create instance " + instance.ID[0].text + ".\n\n" + "Does this entry already exist?  Check the core logs.")
+                alert("Failed to create instance " + instance.ID[0].text + ".\n\n" +
+                    getSOAPFaultReason(response));
             });
         }   
     }    
@@ -171,7 +174,8 @@ angular.module('consoleApp.controllers', [])
                 alert("Successfully deleted instance " + instanceID)
             })
             .error(function (response) {
-                alert("Failed to delete instance " + instanceID + ".\n\n" + "Check the core logs.")
+                alert("Failed to delete instance " + instanceID + ".\n\n" +
+                    getSOAPFaultReason(response));
             });
     }    
 
